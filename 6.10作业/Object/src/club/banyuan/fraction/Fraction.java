@@ -72,7 +72,7 @@ public class Fraction {
 
     Fraction fraction2 = new Fraction();
     fraction2.molecular = 3;
-    fraction2.denominator = 0;
+    fraction2.denominator = 6;
     System.out.println("分数相加：");
     fraction1.plus(fraction2).print();
     System.out.println("分数相乘：");
