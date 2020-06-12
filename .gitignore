@@ -1,0 +1,10 @@
+#Intellij idea
+.idea/
+/idea/
+out/
+*.ipr
+*.iml
+*.iws
+# system ignore
+.DS_Store
+Thumbs.db
