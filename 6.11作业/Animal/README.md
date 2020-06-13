@@ -3,7 +3,7 @@ class Dog {
     int iq;
     void print() {
         System.out.println();
-    }
+    } 
     
     public static void main(String[] args){
         Dog one = new Dog();

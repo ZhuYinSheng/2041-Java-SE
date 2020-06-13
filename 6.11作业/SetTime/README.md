@@ -5,7 +5,7 @@
 - int minute
 - int second
 
-包含方法
+包含方法 
 
 // 设置属性值
 setTime(int aHour,int aMinute,int second)

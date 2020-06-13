@@ -30,4 +30,5 @@ public class Main {
     dog1.playWith(cat1);
     cat1.playWith(dog1);
   }
+
 }

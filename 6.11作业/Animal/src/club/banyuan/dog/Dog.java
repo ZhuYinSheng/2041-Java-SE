@@ -25,25 +25,4 @@ public class Dog {
   public void playWith(Cat cat) {
     System.out.println(name + " " + "和猫一起玩");
   }
-
-//  public static void main(String[] args) {
-//    Dog dog1 = new Dog();
-//    dog1.setName("哈士奇", -100);
-////    dog1.name = "哈士奇";
-////    dog1.IQ = -100;
-//
-//    Dog dog2 = new Dog();
-//    dog2.setName("柯基", 40);
-////    dog2.name = "柯基";
-////    dog2.IQ = 40;
-//
-//    Dog dog3 = new Dog();
-//    dog3.setName("金毛", 100);
-////    dog3.name = "金毛";
-////    dog3.IQ = 100;
-//
-//    dog1.print();
-//    dog2.print();
-//    dog3.print();
-//  }
 }

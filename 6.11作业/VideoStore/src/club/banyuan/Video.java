@@ -30,4 +30,5 @@ public class Video {
   public void setIndex(boolean index) {
     this.index = index;
   }
+
 }
