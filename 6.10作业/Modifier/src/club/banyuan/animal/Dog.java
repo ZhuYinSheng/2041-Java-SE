@@ -20,4 +20,5 @@ public class Dog {
     System.out.printf("狗狗%s和猫咪%s一起玩\n", name, cat.name);
     cat.bark();
   }
+
 }

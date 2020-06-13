@@ -7,4 +7,5 @@ public class Cat {
   void bark() {
     System.out.println(name + ": 喵..");
   }
+
 }

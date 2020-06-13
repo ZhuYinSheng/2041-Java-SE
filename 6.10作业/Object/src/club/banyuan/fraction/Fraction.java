@@ -86,4 +86,5 @@ public class Fraction {
     fraction2.toDouble();
 
   }
+
 }

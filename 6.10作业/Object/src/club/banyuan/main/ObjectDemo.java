@@ -50,4 +50,5 @@ public class ObjectDemo {
     putInElephant(elephant, fridge);
     fridge.store(lion);
   }
+
 }

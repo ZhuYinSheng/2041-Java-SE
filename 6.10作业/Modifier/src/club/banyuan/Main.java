@@ -15,4 +15,5 @@ class Main {
     person.train(dog);
     dog.playWith(cat);
   }
+
 }

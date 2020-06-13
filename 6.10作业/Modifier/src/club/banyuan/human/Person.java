@@ -8,4 +8,5 @@ public class Person {
     System.out.println("训练狗狗" + dog.getName());
     dog.bark();
   }
+
 }

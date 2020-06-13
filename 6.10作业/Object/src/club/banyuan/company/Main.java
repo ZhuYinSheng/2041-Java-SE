@@ -37,4 +37,5 @@ public class Main {
     company.printAll();
     company.printTotalSalary();
   }
+
 }

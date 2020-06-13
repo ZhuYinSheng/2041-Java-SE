@@ -43,4 +43,5 @@ public class Fridge {
     storageElephant = null;
     return ele;
   }
+
 }
