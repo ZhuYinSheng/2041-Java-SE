@@ -12,4 +12,5 @@ public class Main {
     System.out.println("一共创建了 " + Person.countPerson + " 个对象");
     System.out.println("两个参数的构造方法被调用了 " + Person.countMethod + " 次");
   }
+
 }

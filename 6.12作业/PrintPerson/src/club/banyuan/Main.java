@@ -11,4 +11,5 @@ public class Main {
     zhangsan.speak();
     lisi.speak();
   }
+
 }

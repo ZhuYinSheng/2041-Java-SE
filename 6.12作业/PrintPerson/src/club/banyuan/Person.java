@@ -24,4 +24,5 @@ public class Person {
     System.out.println("年龄：" + this.age);
 
   }
+
 }
