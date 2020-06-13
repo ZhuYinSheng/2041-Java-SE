@@ -7,14 +7,10 @@ public class Product {
   private static int scanCode = 1000;
   private int num;
 
-  {
-    scanCode++;
-  }
-
   public Product(String name, double price) {
     this.name = name;
     this.price = price;
-    getScanCode();
+    scanCode++;
   }
 
   public String getName() {
