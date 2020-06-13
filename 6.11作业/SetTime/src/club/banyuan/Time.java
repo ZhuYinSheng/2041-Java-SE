@@ -15,7 +15,6 @@ public class Time {
   public String toString() {
     String result;
     result = hour + ":" + minute + ":" + second;
-//    System.out.println(result);
     System.out.printf("%02d:%02d:%02d\n", hour, minute, second);
     return result;
   }
