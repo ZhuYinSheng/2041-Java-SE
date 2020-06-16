@@ -2,7 +2,7 @@ package club.banyuan;
 
 public class StringButter {
 
-  public String butter = "I'm ";
+  public String butter = "";
 
   /**
    * 接受字符串
@@ -80,6 +80,7 @@ public class StringButter {
 
   public static void main(String[] args) {
     StringButter stringButter = new StringButter();
+
     System.out.println("=====字符串和字符拼接=====");
     stringButter.append("happy");
     stringButter.append('s');
