@@ -1,6 +1,6 @@
 package club.banyuan;
 
-public class Commission extends Hourly{
+public class Commission extends Hourly {
 
   private double totalSales;
   private double commissionRate;
@@ -12,7 +12,7 @@ public class Commission extends Hourly{
     totalSales = 0;
   }
 
-  public void addSales (double totalSales) {
+  public void addSales(double totalSales) {
     this.totalSales += totalSales;
   }
 

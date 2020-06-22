@@ -1,6 +1,6 @@
 package club.banyuan;
 
-public class Shape {
+public abstract class Shape {
 
   public double area() {
     return 0.0;
@@ -13,5 +13,4 @@ public class Shape {
   public String getShapeName() {
     return "形状";
   }
-
 }

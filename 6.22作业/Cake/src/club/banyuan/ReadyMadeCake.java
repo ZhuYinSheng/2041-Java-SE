@@ -1,6 +1,6 @@
 package club.banyuan;
 
-public class ReadyMadeCake extends Cake{
+public class ReadyMadeCake extends Cake {
 
   private double quantity;
 

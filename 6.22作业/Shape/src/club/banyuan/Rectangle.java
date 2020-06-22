@@ -1,6 +1,6 @@
 package club.banyuan;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
 
   private int length;
   private int width;
