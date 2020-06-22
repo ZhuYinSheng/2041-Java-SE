@@ -4,11 +4,11 @@ class A
 
   static
   {
-    i++;
+    i++;    // 1
   }
 
   {
-    ++i;
+    ++i;    // 3
   }
 }
 
@@ -16,11 +16,11 @@ class B extends A
 {
   static
   {
-    --i;
+    --i;    // 2
   }
 
   {
-    i--;
+    i--;    // 4
   }
 }
 

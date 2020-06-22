@@ -6,11 +6,11 @@ class Clidder
   }
 }
 
-public class Clidlet extends Clidder    // 子类的访问修饰符不能超过父类的访问修饰符，应该去掉public
+public class Clidlet extends Clidder
 {
-  public final void flipper()
+  public final void flipper()   // 子类不能重写父类私有方法
   {
-    System.out.println("Clidlet");
+    System.out.println("Clidlet");    // 输出 Clidlet
   }
   public static void main(String[] args)
   {

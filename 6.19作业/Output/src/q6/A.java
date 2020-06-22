@@ -4,7 +4,7 @@ public class A
   {
     super();
 
-    // this
+    // this跟super不能同时使用，都需要在第一句话。
     this(10);
   }
 

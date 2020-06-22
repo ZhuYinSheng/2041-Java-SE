@@ -1,9 +1,9 @@
 class ClassOne
 {
-  static int i, j = 191919;
+  static int i, j = 191919;   // i = 0, j = 191919
 
   {
-    --i;
+    --i;            // 没有new对象 不会调用构造代码块
   }
 
   {
@@ -11,7 +11,7 @@ class ClassOne
   }
 }
 
-public class ClassTwo extends ClassOne  // 子类访问权限不能超过父类
+public class ClassTwo extends ClassOne
 {
   static
   {

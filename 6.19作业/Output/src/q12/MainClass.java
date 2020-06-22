@@ -31,8 +31,8 @@ public class MainClass
 
     System.out.println("--------");
 
-    System.out.println(a.i);    // 2121
+    System.out.println(a.i);    // 2121 | 1212
 
-    System.out.println(b.i);    // 1212
+    System.out.println(b.i);    // 1212 | 2121
   }
 }

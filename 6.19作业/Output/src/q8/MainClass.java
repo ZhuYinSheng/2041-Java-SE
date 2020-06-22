@@ -18,7 +18,7 @@ class N extends M
 
     System.out.println(i);  // 510
 
-    this.i = j * 20;  // i = 26 * 20 = 520
+    this.i = j * 20;  // i = 26 * 20 = 520    继承的父类中有i，所以子类中可以用this.i
   }
 }
 

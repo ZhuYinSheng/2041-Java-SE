@@ -17,7 +17,7 @@ class Y extends X
 
   int methodOfY()
   {
-    return m-- + --m;
+    return m-- + --m;   // 1111 + 1109
   }
 }
 

@@ -23,7 +23,7 @@ class Child extends Parent
   }
 }
 
-public class Main   // 访问修饰符应不为public
+public class Main   
 {
   public static void main(String[] args)
   {

@@ -1,6 +1,6 @@
 package q5;
 
-public class A
+public class A    // 同包路径下可以省略public
 {
   public A(int i)
   {

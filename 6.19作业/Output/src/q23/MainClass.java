@@ -1,14 +1,14 @@
 class A
 {
-  static String s = "AAA";
+  static String s = "AAA";    // 1
 
   static
   {
-    s = s + "BBB";
+    s = s + "BBB";    // 2
   }
 
   {
-    s = "AAABBB";
+    s = "AAABBB";   // 4 覆盖静态
   }
 }
 
@@ -16,7 +16,7 @@ class B extends A
 {
   static
   {
-    s = s + "BBBAAA";
+    s = s + "BBBAAA";   // 3 AAABBBBBBAAA
   }
 
   {

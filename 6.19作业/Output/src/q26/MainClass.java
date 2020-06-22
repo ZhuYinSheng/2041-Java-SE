@@ -10,7 +10,7 @@ class A
 public class MainClass extends A
 {
   {
-    a = new int[5];
+    a = new int[5];   // 重新初始化数组 所有元素为0
   }
 
   {

@@ -6,7 +6,7 @@ class X
 
   public X()
   {
-    i = i++ + i-- - i;
+    i = i++ + i-- - i;    // 101010 + 101011 - 101010
   }
 
   static int staticMethod(int i)

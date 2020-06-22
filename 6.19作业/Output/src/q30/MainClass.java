@@ -14,7 +14,7 @@ class ClassTwo extends ClassOne
 {
   {
     i = -113
-    // -112 + 222 = 110
+    // -113 + (223 -1)  = 109
     j = i-- + --j;
   }
 }
