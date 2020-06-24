@@ -27,10 +27,10 @@ public class DataSet {
     count++;
   }
 
-  public void add(Country country) {
-    sum = sum + country.getMeasure();
-    if (count == 0 || ((Country)maximum).getMeasure() < country.getMeasure()) {
-      maximum = country;
+  public void add(Measurable measurable) {
+    sum = sum + measurable.getMeasure();
+    if (count == 0 || ((Measurable)maximum).getMeasure() < measurable.getMeasure()) {
+      maximum = measurable;
     }
     count++;
   }

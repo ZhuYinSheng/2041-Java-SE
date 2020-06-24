@@ -5,7 +5,7 @@ import com.sun.jdi.Value;
 
 public class ArrayQueue implements Queue {
 
-  private int CAPACITY = 5;
+  private final int CAPACITY = 5;
   private int addIndex = 0;
   private int deleteIndex = 0;
   private int size;

@@ -16,7 +16,7 @@ class B
  
 class C extends B implements A
 {
-     
+     // 类C继承类B中有Method方法，可以不需要重写接口A中的抽象方法，
 }
  
 class MainClass
@@ -73,7 +73,7 @@ public class Test extends B
 ```
 interface A
 {
-    int i = 111;        // 1
+    int i = 111;        // 1  使用的时候直接用A.i
 }
  
 class B implements A 
@@ -96,7 +96,7 @@ class A
  
 interface B extends A
 {
-    //Interface B extending Class A
+    //Interface B extending Class A  // 接口只能继承接口，不能继承类或者抽象类。
 }
 ```
 
@@ -190,7 +190,7 @@ interface A
 }
 ```
 
-编译错误。
+编译错误。接口里面不可以有构造代码块和静态代码块，也不能有构造方法。
 
 ####  8.以下内容是否编译通过，如果不能请指出错误原因
 ```
@@ -250,7 +250,7 @@ public class MainClass
 }
 ```
 
-编译通过，但是运行报错，会陷入递归循环。
+编译通过，但是运行报错，会陷入递归调用，栈溢出。
 
 #### 10.
 ```

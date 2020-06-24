@@ -4,7 +4,6 @@ public class LinkedList {
 
   private Node head;
   private Node tail;
-  private Node tail = head;
 
   /**
    * 更新数组指定下标的元素
@@ -15,6 +14,7 @@ public class LinkedList {
    */
   public Object set(int index, Object element) {
 
+    return null;
   }
 
   /**
@@ -25,7 +25,7 @@ public class LinkedList {
    */
   public Object get(int index) {
 
-
+    return null;
   }
 
   /**
@@ -41,6 +41,7 @@ public class LinkedList {
    * @return 将删除的元素返回，如果下标不合理，返回null
    */
   public Object remove(int index) {
+    return null;
   }
 
   /**
@@ -51,6 +52,7 @@ public class LinkedList {
    * @return
    */
   public boolean remove(Object o) {
+    return false;
   }
 
 
@@ -61,12 +63,14 @@ public class LinkedList {
    * @return 添加成功后返回true 失败返回false
    */
   public boolean add(Object o) {
+    return false;
   }
 
   /**
    * @return 数组中没有元素，返回true
    */
   public boolean isEmpty() {
+    return false;
   }
 
   /**
@@ -75,5 +79,6 @@ public class LinkedList {
    * @return
    */
   public int size() {
+    return 0;
   }
 }
