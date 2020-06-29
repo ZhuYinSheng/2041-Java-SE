@@ -14,8 +14,6 @@ public class Test {
       compact(players);
       printRlt(players);
       players = getLeftPlayers(players);
-
-
     }
   }
 }
