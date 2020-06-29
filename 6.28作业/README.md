@@ -20,7 +20,7 @@ class Outer{
 ```
 static class Outer{
  public static void main(String[] args){
- //
+ 
  }
  private class Inner{
   Inner() {} 
@@ -109,20 +109,22 @@ class ABC
 }
 ```
 new ABC().new XYZ().i
+ABC.XYZ a = new ABC().new XYZ();
+        a.i
 
 #### 7. 运行以下程序时，它是否在控制台上打印“SUCCESS”？
 
 ```
 class A
 {
-    {
+    {               // 第二种改法：static {
         new B();
     }
      
-    static class B
+    static class B                  // 第一种改法：class B
     {
-        {
-            new A().new C();
+        {           // 第三种改法：static {
+            new A().new C();        // 第一种改法：new C();
         }
     }
      
@@ -142,14 +144,14 @@ public class MainClass
     }
 }
 ```
-类A被加载的时候，没有调用new B或new C，内部类不会被自动加载。可以使class B 的 static 移除。
+类A被加载的时候，没有调用new B或new C，内部类不会被自动加载。可以使class B 的 static 移除,并且只new C()。
 
 #### 8. 以下代码能否通过编译，为什么
 
 ```
 class A
 {
-    String s = "AAA";
+    String s = "AAA";       // 或者改为：static String s = "AAA";
      
     void methodA()
     {
@@ -185,7 +187,7 @@ public class MainClass
 {
     public static void main(String[] args)
     {
-        A a = new A() { };		// 3
+        A a = new A() { };		// 3  相当于建了一个匿名内部类。去掉大括号那么就没有办法新建一个抽象类的实例。
     }
 }
 ```
@@ -230,7 +232,7 @@ public class MainClass
 ```
 class A
 {
-    void methodOne()			// 方法中的内部类，属于局部类，只能再方法中使用。
+    void methodOne()			// 方法中的内部类，属于局部类，只能在方法中使用。
     {
         class B
         {
@@ -335,7 +337,7 @@ class A
     }
 }
 ```
-编译报错，递归调用
+编译通过。
 
 #### 15. 在下面的示例中，如何访问“内部类”的“i”字段？
 
@@ -347,6 +349,8 @@ class OuterClass
         int i;
     }
 }
+
+// new InnerClass().i
 
 class Main {
 	public static void main(String[] args) {
@@ -402,7 +406,7 @@ class A
     }
 }
 ```
-没有办法创建B的实例，只能再这个方法中创建B的对象。
+没有办法创建B的实例，只能在这个方法中创建B的对象。
 #### 18.
 
 ```
@@ -459,7 +463,7 @@ public class Outer
 					} 
 				}; 
 		Outer outer = new Outer(); 
-		System.out.println(inner.getValue() + inner.getData() + outer.data); 	// 编译报错，匿名内部类不能通过变量来访问。inner 没有get方法，没有办法访问。
+		System.out.println(inner.getValue() + inner.getData() + outer.data); 	// 编译报错，匿名内部类不能通过变量来访问。inner 没有getData方法，没有办法访问。
 	} 
 } 
 ```
