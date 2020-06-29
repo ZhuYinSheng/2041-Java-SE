@@ -17,17 +17,11 @@ public enum Weekday {
   }
 
   boolean isWeekday() {
-    if (!isHoliday()) {
-      return true;
-    }
-    return false;
+    return !isHoliday();
   }
 
   boolean isHoliday() {
-    if (this == SATURDAY || this == SUNDAY) {
-      return true;
-    }
-    return false;
+    return this == SATURDAY || this == SUNDAY;
   }
 
   @Override

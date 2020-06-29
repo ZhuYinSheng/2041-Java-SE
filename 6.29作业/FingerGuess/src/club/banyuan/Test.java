@@ -1,5 +1,6 @@
 package club.banyuan;
 
+import static club.banyuan.FingerPattern.*;
 import static club.banyuan.PlayerType.*;
 
 public class Test {

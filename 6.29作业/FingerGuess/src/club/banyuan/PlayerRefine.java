@@ -7,7 +7,6 @@ public class PlayerRefine {
   private boolean isOut = false;
   private String name;
 
-
   public PlayerRefine(String type, String name) {
     this.type = type;
     this.name = name;

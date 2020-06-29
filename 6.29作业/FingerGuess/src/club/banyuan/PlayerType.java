@@ -1,8 +1,6 @@
 package club.banyuan;
 
-import static club.banyuan.FingerPattern.getWinPattern;
-
-import java.util.Random;
+import static club.banyuan.FingerPattern.*;
 import java.util.Scanner;
 
 public enum PlayerType {
@@ -14,8 +12,6 @@ public enum PlayerType {
   PlayerType(String name) {
     this.name = name;
   }
-
-
 
   public String getName() {
     return name;
@@ -53,70 +49,6 @@ public enum PlayerType {
     return players;
   }
 
-  public static void printRlt(PlayerRefine[] players) {
-
-    int left = 0;
-    for (PlayerRefine player : players) {
-      if (!player.isOut()) {
-        left++;
-      }
-    }
-
-    if (players.length == left) {
-      for (PlayerRefine player : players) {
-        System.out.println(player.getType() + player.getName() + "出了" + patternToString(player.getPattern()));
-      }
-      System.out.println("平局");
-    } else {
-      for (PlayerRefine player : players) {
-        String msg = player.isOut() ? "被淘汰" : "胜出";
-        System.out.println(player.getType() + player.getName() + "出了" + patternToString(player.getPattern()) + msg);
-      }
-    }
-
-    if (left == 1) {
-      for (PlayerRefine player : players) {
-        if (!player.isOut()) {
-          System.out.println(player.getType() + player.getName() + "胜出");
-        }
-      }
-    }
-
-  }
-
-  public static String patternToString(int pattern) {
-    switch (pattern) {
-      case 1:
-        return "石头";
-      case 2:
-        return "剪刀";
-      case 3:
-        return "布";
-    }
-    return null;
-  }
-
-
-  public static void randomPattern(PlayerRefine player) {
-    Random random = new Random();
-    // [0,3) + 1 = [1,4) = [1,3]
-    player.setPattern(random.nextInt(3) + 1);
-  }
-
-  public static void scanUserPattern(PlayerRefine player) {
-
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("请出拳：\n1.石头\n2.剪刀\n3.布");
-    int pattern = scanner.nextInt();
-    if (pattern < 1 || pattern > 3) {
-      System.out.println("输入不合法！");
-      scanUserPattern(player);
-    } else {
-      player.setPattern(pattern);
-    }
-  }
-
-
   public static int getUsersTotal() {
     Scanner scanner = new Scanner(System.in);
 
@@ -128,7 +60,6 @@ public enum PlayerType {
     }
     return rlt;
   }
-
 
   public static void setPattern(PlayerRefine[] players) {
     for (PlayerRefine player : players) {
@@ -162,9 +93,5 @@ public enum PlayerType {
       boolean isOut = player.getPattern() != winPattern;
       player.setOut(isOut);
     }
-
   }
-
-
-
 }
