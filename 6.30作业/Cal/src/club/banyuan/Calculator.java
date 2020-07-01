@@ -74,6 +74,11 @@ public class Calculator {
           return Integer.parseInt(tokens[0]) - Integer.parseInt(tokens[2]);
         }
 
+        // 数字1, "*", 数字2: 返回两个数字的积
+        if (isInteger(tokens[0]) && tokens[1].equals("*") && isInteger(tokens[2])) {
+          return Integer.parseInt(tokens[0]) * Integer.parseInt(tokens[2]);
+        }
+
         // 数字1, "/", 0: DivideByZeroException
         if (isInteger(tokens[0]) && tokens[1].equals("/") && tokens[2].equals("0")) {
           throw new DivideByZeroException();
@@ -163,6 +168,6 @@ public class Calculator {
   }
 
   public static boolean isOperator(String operator) {
-    return (operator.equals("/") || operator.equals("+") || operator.equals("-"));
+    return (operator.equals("/") || operator.equals("+") || operator.equals("-") || operator.equals("*"));
   }
 }
