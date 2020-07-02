@@ -13,6 +13,7 @@ public class ObjectPairDriver {
     stadiums[2] = new ObjectPair("奥体中心", "66,233");
 
     System.out.println(stadiums[0]);
+    System.out.println(largestStadium(stadiums));
   }
 
   /**
@@ -22,8 +23,16 @@ public class ObjectPairDriver {
    * @return 容量最大的体育馆的名称
    */
   public static String largestStadium(ObjectPair[] stadiums) {
+    ObjectPair maxSecond = stadiums[0];
+    for(ObjectPair one : stadiums) {
+      int second1 = Integer.parseInt(one.getSecond().toString().replace("," , ""));
+      int second2 = Integer.parseInt((maxSecond.getSecond().toString().replace(",", "")));
+      if (second1 > second2) {
+        maxSecond = one;
+      }
+    }
 
-    return "";
+    return maxSecond.getFirst().toString();
   }
 
 }

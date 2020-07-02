@@ -1,5 +1,9 @@
 package club.banyuan;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Pairs<K, V> implements Iterable<Pair<K, V>> {
 
   /* 声明一对对象的固定大小的数组（最多10个元素） */
@@ -10,6 +14,8 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
   public Pairs() {
   }
 
+  private List<Pair<K, V>> pairs = new ArrayList<>();
+
   /**
    * 创建一个新的对，并在有空间的情况下将其添加到集合中。
    *
@@ -17,7 +23,7 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
    * @param second The second object.
    */
   public boolean addPair(K first, V second) {
-    return true;
+    return pairs.add(new Pair<>(first,second));
   }
 
 
@@ -32,6 +38,8 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
    * 按照规定抛出异常
    */
   private class PairIterator implements Iterator<Pair<K, V>> {
+
+    private List<Pair<K, V>> pairs = new ArrayList<>(Pairs.pai)
 
     @Override
     public boolean hasNext() {

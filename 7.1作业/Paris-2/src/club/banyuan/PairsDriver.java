@@ -1,11 +1,13 @@
 package club.banyuan;
 
+import java.util.Iterator;
+
 /**
  * 该代码说明了Pairs类的用法。
  */
 
 public class PairsDriver {
-  
+
   /**
    * Pairs类的测试程序。
    */

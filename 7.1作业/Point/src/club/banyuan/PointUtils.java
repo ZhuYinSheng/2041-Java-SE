@@ -13,7 +13,15 @@ public class PointUtils {
     Iterator<Point> pointIterator = points.iterator();
 
     // TODO 使用迭代器完成此方法!
-    return null;
+    Point max = points.get(0);
+    while (pointIterator.hasNext()) {
+      Point temp = pointIterator.next();
+      if (temp.getY() > max.getY()) {
+        max = temp;
+      }
+    }
+
+    return max;
   }
 
   /**
@@ -22,7 +30,17 @@ public class PointUtils {
   public static Point centroid(List<Point> points) {
     Iterator<Point> pointIterator = points.iterator();
     // TODO 使用迭代器完成此方法!
-    return null;
+    int sumX = 0;
+    int sumY = 0;
+    int count = 0;
+    while (pointIterator.hasNext()) {
+      Point average = pointIterator.next();
+      sumX = sumX + average.getX();
+      sumY = sumY + average.getY();
+      count++;
+    }
+
+    return new Point(sumX / count,sumY / count);
   }
 
   public void test() {
