@@ -3,7 +3,7 @@ package club.banyuan;
 class MaxThread extends Thread {
   private int lo, hi;
   private int[] arr;
-  private double max;
+  private double max = 0;
 
   public MaxThread(int[] arr, int lo, int hi) {
     this.lo = lo;
@@ -51,8 +51,8 @@ public class MaxMultithreaded {
 
     // 等待线程完成并计算它们的结果。
     for (int i = 0; i < numThreads; i++) {
-      double max1 = ts[i].getMax();
       ts[i].join();
+      double max1 = ts[i].getMax();
       if (max < max1) {
         max = max1;
       }
