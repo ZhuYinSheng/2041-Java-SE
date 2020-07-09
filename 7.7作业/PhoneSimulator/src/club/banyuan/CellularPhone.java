@@ -1,8 +1,5 @@
 package club.banyuan;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class CellularPhone extends Thread {
 
   private volatile boolean callInProgress = false;
