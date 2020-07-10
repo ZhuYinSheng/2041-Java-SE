@@ -32,6 +32,7 @@ public class FileMain {
       OutputStream outputStream = new FileOutputStream(
           new File(targetFolder, sourceFile.getName() + "." + index++));
       outputStream.write(bytes, 0, length);
+      outputStream.flush();
       outputStream.close();
     }
     input.close();
@@ -41,18 +42,18 @@ public class FileMain {
   public static void combine(File sourceFolder, File targetFolder) throws Exception {
     OutputStream outputStream = new FileOutputStream(targetFolder);
 
-//    int index = 0;
-//
-//    while (true) {
-//      File input = new File(sourceFolder.getName() + "." + (index++));
-//      if (!input.exists()) {
-//        break;
-//      }
-//    }
+    int index = 0;
+
+    while (true) {
+      File input = new File(sourceFolder.getName() + "." + (index++));
+      if (!input.exists()) {
+        break;
+      }
+    }
 
     byte[] bytes = new byte[9 * 1024];
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < index; i++) {
       File file = new File(sourceFolder.getName() + "." + i);
       InputStream inputStream = new FileInputStream(file);
       int length = 0;

@@ -7,6 +7,9 @@ import java.io.FileWriter;
 
 public class Decode {
 
+  String encode = "/Users/edz/2041-Java-SE/7.9作业/CaesarCipher/src/alice.code";
+  String decode = "/Users/edz/2041-Java-SE/7.9作业/CaesarCipher/src/alice.code.decode";
+
   public static void main(String[] args) throws Exception {
     BufferedReader inStream = null;
     BufferedWriter outStream = null;
@@ -25,17 +28,20 @@ public class Decode {
     outStream = new BufferedWriter(new FileWriter(outputFilePath));
 
     String s = inStream.readLine();
-    StringBuilder builder = new StringBuilder();
-    char[] chars = s.toCharArray();
+//    StringBuilder builder = new StringBuilder();
 
     while (s != null) {
+      char[] chars = s.toCharArray();
       for (char one : chars) {
-        builder.append(caesarDecode(one));
+        outStream.write(caesarDecode(one));
+//        builder.append(caesarDecode(one));
       }
-      outStream.write(String.valueOf(builder));
+//      outStream.write((builder).toString());
+      outStream.newLine();
       s = inStream.readLine();
     }
     outStream.flush();
+    outStream.close();
 
     System.out.println("解密成功！");
   }

@@ -37,17 +37,19 @@ public class Encode {
     outStream = new BufferedWriter(new FileWriter(outputFilePath));
 
     String s = inStream.readLine();
-    StringBuilder builder = new StringBuilder();
-    char[] chars = s.toCharArray();
+//    StringBuilder builder = new StringBuilder();
 
     while (s != null) {
+      char[] chars = s.toCharArray();
       for (char one : chars) {
-        builder.append(caesarEncode(one));
+        outStream.write(caesarEncode(one));
       }
-      outStream.write(String.valueOf(builder));
+//      outStream.write((builder).toString());
+      outStream.newLine();
       s = inStream.readLine();
     }
     outStream.flush();
+    outStream.close();
 
     System.out.println("加密成功！");
   }
