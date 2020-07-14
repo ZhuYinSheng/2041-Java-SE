@@ -58,10 +58,6 @@ public class TcpClient {
 //                IOException e) {
 //            e.printStackTrace();
 //        }
-    
-
-
-
 
     public static byte[] parse(int target) {
         byte[] bytes = new byte[4];
